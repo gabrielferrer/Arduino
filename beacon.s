@@ -1,6 +1,5 @@
 ; beacon.asm
-; 	turns on/off an LED which is connected to PB5 (digital out 13)
-;	based on timer interrupt.
+; 	turns on/off an LED which is connected to PD7 based on timer1 overflow interrupt.
 ;
 ; flash with: avrdude -p atmega328p -c arduino -P /dev/ttyACM0 -U flash:w:beacon.hex:i
 
@@ -37,6 +36,7 @@ reset:
 	sei                                ; Enable global interrupts.
 
 loop:
+	sleep
 	rjmp loop
 
 timer1_overflow:
