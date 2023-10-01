@@ -40,6 +40,7 @@ reset:
 	sei                                   ; Enable global interrupts.
 
 loop:
+	sleep
 	rjmp loop
 
 timer1_compA:
