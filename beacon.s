@@ -5,7 +5,11 @@
 
 .include "m328Pdef.inc"
 
-.equ COUNT, 0x85ee
+.equ COUNT, 0x85ee                     ; 16Mhz / 256 (prescaler) = 62.5Khz
+                                       ; 1 / 62.5Khz = 16 us (tick duration)
+                                       ; 500 ms / 16 us = 31250 ticks
+                                       ; 65536 - 31250 = 34286 (0x85ee) starting
+                                       ; counter value to have required ticks.
 
 .text
 	jmp reset                          ; Reset Handler

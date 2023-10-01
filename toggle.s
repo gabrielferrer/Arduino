@@ -6,7 +6,9 @@
 
 .include "m328Pdef.inc"
 
-.equ COUNT, 0x85ee
+.equ COUNT, 0x7a12                        ; 16Mhz / 256 (prescaler) = 62.5Khz
+                                          ; 1 / 62.5Khz = 16 us (tick duration)
+                                          ; 500 ms / 16 us = 31250 (0x7a12) ticks
 
 .text
 	jmp	reset
