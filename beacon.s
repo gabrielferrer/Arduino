@@ -16,6 +16,7 @@
 .org OVF1addr
 	jmp timer1_overflow                ; Timer1 Overflow Handler
 
+.org Start
 reset:
 	ldi r16, hi8(RAMEND)               ; Set stack pointer to top of RAM.
 	out SPH, r16

@@ -15,6 +15,7 @@
 .org OC1Aaddr
 	jmp	timer1_compA                      ; Timer1 compare match A
 
+.org Start
 reset:
 	ldi r16, hi8(RAMEND)                  ; Set stack pointer to top of RAM.
 	out SPH, r16

@@ -963,6 +963,7 @@
 .equ	ACIaddr,	0x005c	; Analog Comparator
 .equ	TWIaddr,	0x0060	; Two-wire Serial Interface
 .equ	SPMRaddr,	0x0064	; Store Program Memory Read
+.equ	Start,		0x0068  ; Program starting point
 
 .equ	INT_VECTORS_SIZE,	52	; size in words
 
