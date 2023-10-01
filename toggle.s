@@ -37,10 +37,6 @@ reset:
 	ldi r16, 1 << OCIE1A                  ; Enable timer compare interrupt.                 
 	sts TIMSK1, r16
 
-	;clr r16                               ; Initialize timer value.
-	;sts TCNT1H, r16
-	;sts TCNT1L, r16
-
 	sei                                   ; Enable global interrupts.
 
 loop:
